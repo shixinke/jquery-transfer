@@ -16,6 +16,7 @@
             throw new Error('the source selector not found');
             return false;
         }
+		this.options.formName = $source.attr('name');
         var self = this;
         $source.find('option').each(function(){
             var obj = {};
@@ -37,6 +38,7 @@
             var transfer = new Transfer(_this, settings);
             transfer.init();
             var template = $.fn.transfer.defaults.template.
+			    replace('{{name}}', transfer.options.formName).
                 replace('{{sourceTitle}}', settings.sourceTitle).
                 replace('{{targetTitle}}', settings.targetTitle).
                 replace(/\{\{iconPrefix}}/g, settings.iconPrefix).
@@ -57,6 +59,7 @@
             $html.find('.transfer-left-panel .transfer-panel-list').append(sourceHtml);
             $html.find('.transfer-right-panel .transfer-panel-list').append(targetHtml);
             _this.html($html.html());
+			_this.$hidden = $('#transfer-hidden');
             _this.$sourcePanel = _this.find('.transfer-left-panel');
             _this.$targetPanel = _this.find('.transfer-right-panel');
             _this.$filterInput = _this.find('.transfer-panel-filter :input');
@@ -89,6 +92,11 @@
                 } else {
                     $btn.attr('disabled', true);
                 }
+				var values = [];
+                _this.$targetSelect.find(':checkbox').each(function(){
+                    values.push($(this).val());
+                });
+                _this.$hidden.val(values.join(','));
                 parent.find('.selected-count').text(checkedLength);
                 parent.find('.transfer-item-count').text(checkboxLength);
             }
@@ -149,6 +157,7 @@
     $.fn.transfer.defaults = {
         'template':                                         
             '<div class="transfer">\
+                 <input type="hidden" id="transfer-hidden" name="{{name}}">\
                  <div class="transfer-item pull-left ">\
                      <div class="transfer-panel transfer-left-panel">\
                          <p class="transfer-panel-header">{{sourceTitle}}</p>\
