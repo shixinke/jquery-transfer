@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Transfer Demo</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/transfer.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+	<h1>Transfer Multiselect Demo</h1>
+
+    <div id="test">
+        <select id="source" multiple="multiple">
+            <option value="1">第一项</option>
+            <option value="2" selected="selected">第二项</option>
+            <option value="3" selected>第三项</option>
+        </select>
+        <select id="target" multiple="multiple">
+
+        </select>
+    </div>
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery.transfer.js"></script>
+    <script>
+		$(function() {
+            $('#test').transfer({
+                source:'#source',
+                target:'#target'
+            });
+		});
+    </script>
+  </body>
+</html>
+
+
+
+

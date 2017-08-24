@@ -1,0 +1,178 @@
+.transfer {
+	font-size: 14px;
+	display:block;
+}
+.transfer-item{display:block;height:100%;}
+.transfer-panel .transfer-panel-footer:after{
+	display: inline-block;
+	content: "";
+	height: 100%;
+	vertical-align: middle
+}
+
+.transfer-buttons {
+	position:relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px;
+}
+
+.transfer-buttons .btn {
+	display: block;
+	margin: 0 auto;
+	padding: 8px 12px
+}
+
+.transfer-buttons .btn:first-child {
+	margin-bottom: 6px
+}
+
+.transfer-buttons .btn [class*=icon-]+span {
+	margin-left: 0
+}
+
+.transfer-panel {
+	border: 1px solid #d1dbe5;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,.12),0 0 6px rgba(0,0,0,.04);
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	box-sizing: border-box;
+	position: relative
+}
+
+.transfer-panel .transfer-panel-header {
+	height: 36px;
+	line-height: 36px;
+	background: #fbfdff;
+	margin: 0;
+	padding-left: 20px;
+	border-bottom: 1px solid #d1dbe5;
+	box-sizing: border-box;
+	color: #1f2d3d
+}
+
+.transfer-panel .transfer-panel-footer {
+	height: 36px;
+	line-height:36px;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #d1dbe5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	font-size: 14px;
+	color: #5e6d82;
+}
+
+.transfer-panel .transfer-panel-footer .checkbox {
+	padding-left: 20px;
+	color: #8391a5
+}
+
+.transfer-panel .transfer-panel-empty {
+	margin: 0;
+	height: 32px;
+	line-height: 32px;
+	padding: 6px 20px 0;
+	color: #8391a5
+}
+
+.transfer-panel .checkbox-label {
+	padding-left: 14px
+}
+
+.transfer-panel .checkbox-inner {
+	width: 14px;
+	height: 14px;
+	border-radius: 3px
+}
+
+.transfer-panel .checkbox-inner:after {
+	height: 6px;
+	width: 3px;
+	left: 4px
+}
+
+.transfer-panel-body {
+	padding-bottom: 36px;
+	height: 246px
+}
+
+.transfer-panel-list {
+	margin: 0;
+	padding: 6px 0;
+	list-style: none;
+	height: 246px;
+	overflow: auto;
+	box-sizing: border-box
+}
+
+.transfer-panel-list.is-filterable {
+	height: 214px
+}
+
+.transfer-panel-item {
+	height: 32px;
+	line-height: 32px;
+	padding-left: 20px;
+	display: block
+}
+
+.transfer-panel-item .checkbox-label {
+	white-space: nowrap;
+	display: block;
+	box-sizing: border-box;
+	padding-left: 5px
+}
+
+.transfer-panel-item+.transfer-panel-item {
+	margin-left: 0
+}
+
+.transfer-panel-item.checkbox {
+	color: #48576a;
+}
+
+.transfer-panel .checkbox-inline{vertical-align:middle;margin-top:10px;}
+
+.transfer-panel-item:hover {
+	background: #e4e8f1
+}
+
+.transfer-panel-filter {
+	margin-top: 10px;
+	text-align: center;
+	padding: 0 10px;
+	width: 100%;
+	box-sizing: border-box
+}
+
+.transfer-panel-filter .input-inner {
+	height: 30px;
+	width: 100%;
+	display: inline-block;
+	box-sizing: border-box
+}
+
+.transfer-panel-filter .input-icon {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 15px;
+	top: 55px;
+	text-align: center;
+	color: #bfcbd9;
+	transition: all .3s;
+}
+
+.transfer-panel-filter .icon-circle-close {
+	cursor: pointer
+}
+
+.transfer-panel-footer label{padding-left:10px;}
+.transfer-panel-footer .checkbox-label{display:inline-block;margin-top:10px;}
