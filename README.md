@@ -13,6 +13,14 @@
 
 ## 插件效果
 
+基本用法：
+
+![基本用法](https://github.com/shixinke/jquery-transfer/tree/master/screenshots/basic.png)
+
+选项过滤：
+
+![选项过滤](https://github.com/shixinke/jquery-transfer/tree/master/screenshots/search.png)
+
 ## 插件依赖
 
 - jquery
